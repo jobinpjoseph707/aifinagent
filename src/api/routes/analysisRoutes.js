@@ -1,8 +1,10 @@
-﻿const express = require('express');
+const express = require('express');
 const router = express.Router();
-const  = require('../controllers/');
+const analysisController = require('../controllers/analysisController');
 
-// Example route
-router.get('/', .getAll);
+// Analysis routes
+router.get('/', analysisController.getAll);
+router.get('/sentiment', analysisController.getSentiment);
+router.post('/analyze-text', analysisController.analyzeText);
 
 module.exports = router;

@@ -1,8 +1,12 @@
-﻿const express = require('express');
+const express = require('express');
 const router = express.Router();
-const  = require('../controllers/');
+const mcpController = require('../controllers/mcpController');
 
-// Example route
-router.get('/', .getAll);
+// MCP routes
+router.get('/', mcpController.getAll);
+router.get('/context/:provider', mcpController.getContext);
+router.get('/market-data', mcpController.getMarketDataContext);
+router.get('/sentiment', mcpController.getSentimentContext);
+router.get('/strategy', mcpController.getStrategyContext);
 
 module.exports = router;

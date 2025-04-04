@@ -1,8 +1,12 @@
-﻿const express = require('express');
+const express = require('express');
 const router = express.Router();
-const  = require('../controllers/');
+const marketDataController = require('../controllers/marketDataController');
 
-// Example route
-router.get('/', .getAll);
+// Market data routes
+router.get('/', marketDataController.getAll);
+router.get('/nifty', marketDataController.getNifty);
+router.get('/sensex', marketDataController.getSensex);
+router.get('/stock/:symbol', marketDataController.getStock);
+router.get('/sector/:sector', marketDataController.getSector);
 
 module.exports = router;
