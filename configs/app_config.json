@@ -1,0 +1,55 @@
+﻿{
+    "market_data": {
+        "update_interval": 60,
+        "indices": ["NIFTY 50", "SENSEX", "NIFTY BANK", "NIFTY IT"],
+        "top_stocks": 50
+    },
+    "news_sources": [
+        {
+            "name": "Economic Times",
+            "url": "https://economictimes.indiatimes.com/markets/rss.cms",
+            "type": "rss"
+        },
+        {
+            "name": "Moneycontrol",
+            "url": "https://www.moneycontrol.com/rss/latestnews.xml",
+            "type": "rss"
+        },
+        {
+            "name": "LiveMint",
+            "url": "https://www.livemint.com/rss/markets",
+            "type": "rss"
+        }
+    ],
+    "sentiment_analysis": {
+        "update_interval": 3600,
+        "sources": ["news", "social_media", "analyst_reports"],
+        "weights": {
+            "news": 0.5,
+            "social_media": 0.3,
+            "analyst_reports": 0.2
+        }
+    },
+    "strategy": {
+        "risk_profiles": ["conservative", "moderate", "aggressive"],
+        "time_horizons": ["short", "medium", "long"],
+        "sectors": [
+            "IT", "Banking", "Pharma", "FMCG", "Auto",
+            "Oil & Gas", "Metals", "Infra", "Realty", "Telecom"
+        ]
+    },
+    "mcp": {
+        "models": {
+            "sentiment": {
+                "provider": "openai",
+                "model": "gpt-4",
+                "temperature": 0.2
+            },
+            "strategy": {
+                "provider": "openai",
+                "model": "gpt-4",
+                "temperature": 0.4
+            }
+        }
+    }
+}

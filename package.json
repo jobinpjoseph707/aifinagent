@@ -1,0 +1,32 @@
+﻿{
+    "name": "financial-ai-agent-india",
+    "version": "0.1.0",
+    "description": "AI-powered financial agent for India using MCP",
+    "main": "src/index.js",
+    "scripts": {
+        "start": "node src/index.js",
+        "dev": "nodemon src/index.js",
+        "test": "jest"
+    },
+    "author": "",
+    "license": "MIT",
+    "dependencies": {
+        "express": "^4.18.2",
+        "mcp-server": "^0.1.0",
+        "mcp-client": "^0.1.0",
+        "axios": "^1.6.2",
+        "mongoose": "^8.0.1",
+        "dotenv": "^16.3.1",
+        "natural": "^6.8.0",
+        "node-cron": "^3.0.2",
+        "cheerio": "^1.0.0-rc.12",
+        "winston": "^3.11.0",
+        "cors": "^2.8.5",
+        "socket.io": "^4.7.2"
+    },
+    "devDependencies": {
+        "jest": "^29.7.0",
+        "nodemon": "^3.0.1",
+        "eslint": "^8.54.0"
+    }
+}
